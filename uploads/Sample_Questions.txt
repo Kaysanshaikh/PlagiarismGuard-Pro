@@ -1,0 +1,121 @@
+You are a database administrator (DBA) for an organization that has recently acquired a new project. You need to set up a new table to store employee details, which should include columns for employee ID, name, department, and salary. The employee ID should be unique.
+
+ 
+
+Question 1:
+What SQL command would you use to create the employees table with the described structure?
+
+ 
+
+A) CREATE TABLE employees (emp_id NUMBER, name VARCHAR2(100), department VARCHAR2(50), salary NUMBER, CONSTRAINT pk_emp_id PRIMARY KEY (emp_id));
+B) CREATE TABLE employees (emp_id INT, name VARCHAR(100), department VARCHAR(50), salary DECIMAL, UNIQUE(emp_id));
+C) CREATE TABLE employees (emp_id INTEGER, name VARCHAR(100), department VARCHAR(50), salary FLOAT, PRIMARY KEY(emp_id));
+D) CREATE TABLE employees (emp_id INTEGER, name VARCHAR(100), department VARCHAR(50), salary NUMERIC);
+
+Answer:- A
+
+
+You are working with the employees table and need to update the salary of an employee with emp_id = 101 to 75000.
+
+ 
+
+Question 2:
+What SQL statement would you use to achieve this?
+
+ 
+
+A) UPDATE employees SET salary = 75000 WHERE emp_id = 101;
+B) ALTER employees SET salary = 75000 WHERE emp_id = 101;
+C) MODIFY employees SET salary = 75000 WHERE emp_id = 101;
+D) UPDATE employees SET salary 75000 WHERE emp_id = 101;
+Answer:
+A) UPDATE employees SET salary = 75000 WHERE emp_id = 101;
+
+The employees table has several records. You mistakenly want to delete the record of the employee with emp_id = 105 but you accidentally omit the WHERE clause.
+
+ 
+
+Question 3:
+What will happen when you execute this command: DELETE FROM employees;?
+
+ 
+
+A) Only the employee with emp_id = 105 will be deleted.
+B) All rows in the employees table will be deleted.
+C) The database will throw an error and no rows will be deleted.
+D) Only the first 100 rows will be deleted.
+
+Answer:- B
+
+You are conducting a transaction involving several SQL commands to update employee salaries in the employees table. After updating the salaries, you realize that you forgot to apply a discount on one employee's salary. You decide to roll back the transaction to the state before the changes.
+
+ 
+
+Question 4:
+What command should you use to revert all changes made in the current transaction?
+A) ROLLBACK;
+B) UNDO TRANSACTION;
+C) SAVEPOINT rollback;
+D) COMMIT ROLLBACK;
+
+Answer:- A
+
+Scenario:
+As a DBA, you need to grant specific privileges to a user so that they can only read from the employees table. They should not be able to insert, update, or delete any records.
+
+
+Question 5:
+What command would you use to grant this read-only access to the user john_doe?
+
+ 
+A) GRANT SELECT ON employees TO john_doe;
+B) GRANT ALL PRIVILEGES ON employees TO john_doe;
+C) GRANT SELECT, INSERT, UPDATE ON employees TO john_doe;
+D) GRANT READ ONLY ON employees TO john_doe;
+
+Answer:- A
+
+You have a user alice in the system who should have the ability to grant and revoke privileges on the employees table to other users, but you do not want them to have full control over the database.
+
+Question 6:
+What command would you use to allow alice to grant and revoke privileges on the employees table?
+
+A) GRANT SELECT, INSERT, UPDATE ON employees TO alice WITH GRANT OPTION;
+B) GRANT ALL PRIVILEGES ON employees TO alice WITH GRANT OPTION;
+C) GRANT SELECT ON employees TO alice WITH GRANT OPTION;
+D) GRANT CONTROL ON employees TO alice WITH GRANT OPTION;
+
+Answer:-A
+
+
+You need to add a new column hire_date of type DATE to the employees table.
+
+Question 7:
+Which SQL command will add this column to the table?
+
+A) ALTER TABLE employees ADD hire_date DATE;
+B) ALTER TABLE employees MODIFY hire_date DATE;
+C) ADD COLUMN hire_date TO employees DATE;
+D) UPDATE employees ADD hire_date DATE;
+
+Answer:- A
+
+
+You want to set a point in the transaction where you can roll back to later if needed.
+
+Question 8:
+Which command will you use to set a savepoint?
+
+A) SAVEPOINT start_transaction;
+B) SET SAVEPOINT start_transaction;
+C) SAVEPOINT start_transaction ON employees;
+D) MARK SAVEPOINT start_transaction;
+
+Answer:- A
+
+
+
+
+
+
+

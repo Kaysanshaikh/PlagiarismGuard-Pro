@@ -34,10 +34,10 @@ A comprehensive plagiarism detection tool that offers two main functionalities:
 ## Installation and Setup
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/Kaysanshaikh/PlagiarismGuard-Pro
 
 # Navigate to project directory
-cd Plagiarism-Detection-Tool
+cd PlagiarismGuard-Pro
 
 # Install dependencies
 pip install -r requirements.txt

@@ -55,14 +55,22 @@ def allowed_file(filename):
     """Check if file has an allowed extension"""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+from PyPDF2 import PdfReader
+
 def extract_text_from_pdf(file_path):
-    """Extract text from a PDF file"""
     text = ""
-    with open(file_path, 'rb') as file:
-        pdf_reader = PyPDF2.PdfReader(file)
-        for page_num in range(len(pdf_reader.pages)):
-            page = pdf_reader.pages[page_num]
-            text += page.extract_text()
+    try:
+        with open(file_path, "rb") as file:
+            reader = PdfReader(file)
+            for page in reader.pages:
+                try:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text += page_text
+                except Exception as e:
+                    print(f"Error reading page: {e}")
+    except Exception as e:
+        print(f"Error reading file: {e}")
     return text
 
 def extract_text_from_docx(file_path):

@@ -50,8 +50,8 @@ The primary objectives of this project are to:
 
 1. **Clone the Repository:**
    ```
-   git clone 
-   cd Plagiarism-Detection-Tool
+   git clone https://github.com/Kaysanshaikh/PlagiarismGuard-Pro
+   cd PlagiarismGuard-Pro
    ```
 
 2. **Create and Activate Virtual Environment:**
@@ -82,7 +82,7 @@ The primary objectives of this project are to:
 **6. Detailed Project Structure**
 
 ```
-Plagiarism-Detection-using-ML/
+PlagiarismGuard-Pro/
 ├── app.py                        # Main Flask application file
 ├── requirements.txt              # Python dependencies
 ├── word.txt                      # Temporary file for storing text input

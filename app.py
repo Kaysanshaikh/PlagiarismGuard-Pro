@@ -24,6 +24,7 @@ warnings.filterwarnings("ignore", module='bs4')
 # Download required NLTK data
 nltk.download('stopwords', quiet=True)
 nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
 
 # Set up upload folder and allowed extensions
 path = os.getcwd()
